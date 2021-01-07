@@ -25,7 +25,8 @@
         <div id="ctnJsCode" class="form-group">
             <h3>Le code javascript de capture</h3>
             <button class="btnExec" type="button" label="Appuyer pour executer le script" onclick="exec('jsCode')" class="btn btn-primary">Execute</button>
-
+            <p>Vous pouvez taper le code JS que vous voulez
+                avec Textarea qui s'adapte à la longueur du code !</p>
             <textarea id="jsCode" class="form-control">
                 var ctnHello = window.document.getElementById("ctnHello");
                 writeResult(ctnHello.innerHTML);
@@ -67,6 +68,10 @@
     
     <p class="reponse">Voir ci-dessus</p>
 
-    
+    <h2>TP Exercice TPDom Ex2</h2>
+    <p class="enonce"Cliquez sur le bouton pour affichier tous les attributs de ce lien><a id="w3r" type="text/html" hreflang="en‐us" rel="nofollow" target="_self" href="https://www.w3resource.com/">w3resource</a></p>
+    <button onclick="resultatGetAttributes('w3r', 'ctnReponseAttribs')">Click here to get attributes value</button>
+    <p class="reponse" id="ctnReponseAttribs"></p>
+
 </body>
 </html>
