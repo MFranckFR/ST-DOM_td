@@ -13,17 +13,18 @@ function exec() {
     const fn = new Function(code)
     clearResult();
     writeResult(fn());
-  }
-
-  /*
-
-var ctnHello = window.document.getElementById("ctnHello");
-writeResult(ctnHello.innerHTML);
-var parConteneurs = document.getElementsByName("hellos");
-for (var parConteneur of parConteneurs){
-    writeResult(parConteneur.innerHTML);
 }
-  */
+
+
+function toggle(eltID){
+    elt = document.getElementById(eltID);
+    if(elt){
+        elt.className = elt.className == 'process' ? 'processed' : 'process';
+    }else{
+        console.error(`toogle: élement ${eltID} est inexistant`);
+    }
+
+}
 
 // Auto-resize textarea
 // adapté du code
@@ -64,5 +65,8 @@ class TextAreaAutoresize {
     }
 }
 
+function main(){
+    jsCode = new TextAreaAutoresize('jsCode');
+}
 
-jsCode = new TextAreaAutoresize('jsCode');
+main();

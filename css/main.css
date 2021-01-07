@@ -25,6 +25,42 @@ color: green;
     font-style: italic;
     color:magenta;
 }
+p.enonce:before {
+    content: "Q:";
+    display: block;
+    /* background: url("process_pink_3964305.png") no-repeat; */
+    float: left;
+    margin: 0 6px 0 0;
+}
+.reponse{
+    font-weight: bold;
+}
+.reponse:before{
+    content: "R:";
+    display: block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 6px 0 0;
+}
+
+.process:before {
+    content: "";
+    display: block;
+    background: url("process_pink_3964305.png") no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 6px 0 0;
+}
+.process{
+    color:darkslateblue;
+}
+.processed{
+    color:white;
+    background-color: black;
+    padding-left: 5px;
+}
 
 #ctnResultHello {
     display:flex;

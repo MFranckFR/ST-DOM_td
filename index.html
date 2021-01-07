@@ -14,16 +14,14 @@
 
     <h2>Capturons des hellos</h2>
     <div id="ctnHellos">
-
+        <h3>Les élements à capturer</h3>
         <div id="ctnHello">
-            <h3>Les élements à capturer</h3>
             <p> Considérons les paragraphes suivants :</p>
             <p class="blue" name="hellos">Bonjour</p>
             <p class="red" name="hellos">Bonsoir, voici <a href="#"> ma page </a></p>
             <p class="blue" name="hellos">Salut </p>
         </div>
-
-
+        <p class="enonce">Capturez les éléments suivant et amusez-vous !</p>
         <div id="ctnJsCode" class="form-group">
             <h3>Le code javascript de capture</h3>
             <button class="btnExec" type="button" label="Appuyer pour executer le script" onclick="exec('jsCode')" class="btn btn-primary">Execute</button>
@@ -46,5 +44,22 @@
     </div>
 
     <script src="js/main.js"></script>
+
+    <h2>TP Exercice TPDom</h2>
+    <h3>Changez le style du texte en 1 click</h3>
+    <p class="enonce">
+        Ecrire la fonction changer_style qui permet de styler le paragraphe au clic du bouton par :</p>
+        <ul class="enonce">
+            <li> une couleur blanche.</li>
+            <li>un background noir.</li>
+            <li>une bordure noire pointillée de 1px.</li>
+            <li>un retrait de 5px.</li>
+        </ul>
+    <p class="reponse">Cliquez sur le texte suivant pour activer/désactiver le style</p>
+    <p id="parag1" class="process" onclick="toggle('parag1')">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+    </p>
 </body>
 </html>
