@@ -1,0 +1,53 @@
+# Main css
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+
+body{
+    font-family: 'Libre Baskerville', serif;
+    padding: 10pt;
+    margin-left:50px;
+    margin-right:30px;
+    font-size:12pt;
+}
+
+
+.red {
+color: red;
+}
+.blue {
+color: blue;
+}
+.green {
+color: green;
+}
+
+.enonce{
+    font-style: italic;
+    color:magenta;
+}
+
+#ctnResultHello {
+    display:flex;
+    position:relative;
+    border-style: outset;
+    border-color: darkblue;
+    box-sizing:border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 5px;
+    padding:20px;
+    background-color: rgb(144, 208, 211);
+}
+
+#ctnResultHello h3{
+    text-decoration: underline;
+}
+
+#jsCode{
+    border-style: outset;
+    border-color: darkgrey;
+    box-sizing:border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 5px;
+    padding:20px;
+    background-color: lightgoldenrodyellow;
+}
