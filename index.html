@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Voyage en DOMus</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script> -->
   <link rel="stylesheet" href="css/main.css" type="text/css" media="screen">
 </head>
 <body>
@@ -27,7 +27,7 @@
             <button class="btnExec" type="button" label="Appuyer pour executer le script" onclick="exec('jsCode')" class="btn btn-primary">Execute</button>
             <p>Vous pouvez taper le code JS que vous voulez
                 avec Textarea qui s'adapte à la longueur du code !</p>
-            <textarea id="jsCode" class="form-control">
+            <textarea id="jsCode">
                 var ctnHello = window.document.getElementById("ctnHello");
                 writeResult(ctnHello.innerHTML);
                 var parConteneurs = document.getElementsByName("hellos");
@@ -37,7 +37,6 @@
             </textarea>
         </div>
 
-       
         <div id="ctnResultHello">
             <h3>Résultat</h3>
             <div id="logResultHello"></div>
@@ -50,14 +49,15 @@
     <h3>Changez le style du texte en 1 click</h3>
     <p class="enonce">
         Ecrire la fonction changer_style qui permet de styler le paragraphe au clic du bouton par :</p>
-        <ul class="enonce">
-            <li> une couleur blanche.</li>
-            <li>un background noir.</li>
-            <li>une bordure noire pointillée de 1px.</li>
-            <li>un retrait de 5px.</li>
-        </ul>
+    <ul class="enonce">
+        <li> une couleur blanche.</li>
+        <li>un background noir.</li>
+        <li>une bordure noire pointillée de 1px.</li>
+        <li>un retrait de 5px.</li>
+    </ul>
     <p class="reponse">Cliquez sur le texte suivant pour activer/désactiver le style</p>
-    <p id="parag1" class="process" onclick="toggle('parag1')">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    <p id="parag1" class="process" onclick="toggle('parag1')">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+        do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat.
@@ -65,11 +65,12 @@
 
     <p class="enonce">Définir les propriétés précédentes dans une classe "active" et modifier la fonction
         changer_style de telle façon qu'elle ajoute la classe "active" au paragraphe.</p>
-    
+
     <p class="reponse">Voir ci-dessus</p>
 
     <h2>TP Exercice TPDom Ex2</h2>
-    <p class="enonce"Cliquez sur le bouton pour affichier tous les attributs de ce lien><a id="w3r" type="text/html" hreflang="en‐us" rel="nofollow" target="_self" href="https://www.w3resource.com/">w3resource</a></p>
+    <p class="enonce" Cliquez sur le bouton pour affichier tous les attributs de ce lien><a id="w3r" type="text/html"
+            hreflang="en‐us" rel="nofollow" target="_self" href="https://www.w3resource.com/">w3resource</a></p>
     <button onclick="resultatGetAttributes('w3r', 'ctnReponseAttribs')">Click here to get attributes value</button>
     <p class="reponse" id="ctnReponseAttribs"></p>
 
@@ -79,11 +80,42 @@
 
     <p id="ctnResultEx3" class=reponse></p>
 
-    <form id="form1""  onsubmit="return false">
+    <form id="form1""  onsubmit=" return false">
         First name: <input type="text" name="fname" value="David"><br>
         Last name: <input type="text" name="lname" value="Beckham"><br>
         <input type="submit" value="Submit" onclick="resultatgetFormFieldsByNames('form1', ['fname','lname'])">
     </form>
+
+    <h2>TP Exercice TPDom Ex4</h2>
+
+    <p class="enonce">À un document HTML, ajouter des alertes :</p>
+    <ul>
+        <li>Au chargement de la page (attribut onload)</li>
+        <li>Quand on passe sur une image (attribut onmouseover)  
+            <div id="flipBox" onmouseover="flipFlop.do(this)"" onmouseout="flipFlop.do(this)" onclick="flipFlop.reset()">
+            <img src="img/logo_arch.jpg" height="100" width="100" alt="Logo Arch" title="logo Arch" class="flip"/>
+            <img src="img/logo_arch-neg.jpg" height="100" width="100" alt="Inverted Logo Arch" title="Inverted logo Arch" class="flop" />
+            <img src="img/logo_arch.jpg" height="100" width="100" alt="Logo Arch" title="logo Arch" class="flop"/>
+            <img src="img/logo_arch-neg.jpg" height="100" width="100" alt="Inverted Logo Arch" title="Inverted logo Arch" class="flip" />
+
+        </div></li>
+        <li>Quand on clique sur l'image quand vous êtes énervé (attribut onclick)</li>
+        -
+    </ul>
+    <p class="enonce">Avec des boutons :</p>
+    <ul>
+        <li>Changer la couleur de fond quand on clique sur un bouton</li>
+        - <li>Changer aussi l'apparence du bouton</li>
+        <li>Ajouter un bouton qui permette de revenir à la normale.</li>
+    </ul>
+    <p class="enonce">Sur des images</p>
+    <ul>
+        <li>Changer une image par une autre quand la souris passe dessus (attribut onmouseover)</li>
+        <li>Remettre l'image d'origine quand la souris quitte l'image (attribut onmouseout)</li>
+    </ul>
+    <div id="ctnEx4">
+       
+    </div>
 
 </body>
 </html>

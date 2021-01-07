@@ -111,6 +111,33 @@ function resultatgetFormFieldsByNames(formID, names){
     writeInto('ctnResultEx3', `<ul>${dict2html(dict, 'li')}</ul>`);
 }
 
+/* Exo 4 */
+var flipFlop = {
+    counter:0,
+    _thresold:10,
+    threshold:10,
+    do:function(eltID){
+        this.counter += 1;
+        //console.log(this.threshold);
+        eltID.childNodes.forEach(e=>e.className = e.className == 'flip' ? 'flop' : 'flip');
+        if(this.counter % this.threshold == 0) {
+            this.alert(`C'est bien énervant de bouger sa souris ${this.counter} fois sur l'image ?!`);
+        }
+    },
+    alert:function(msg){
+        window.alert(msg);
+        this.threshold = Math.floor(Math.random()*10 + this.threshold);
+    },
+    reset:function(){
+        this.threshold = this._thresold;
+        this.counter = 0;
+        //console.warn('flipFlop is reset');
+    }
+}
+
+
+
+
 /**
  * Auto-resize d'un textarea
  * adapté du code
@@ -156,7 +183,7 @@ function main(){
     jsCode = new TextAreaAutoresize('jsCode');
 }
 
-main();
+window.onload = main();
 
 
 
@@ -180,7 +207,7 @@ Sur des images :
 Ex5
 
 Un premier controle de formulaire
-1. Ecrire une page HTML comportant un mini-formulaire compos´e d'un champ de saisie et d'un ´
+1. Ecrire une page HTML comportant un mini-formulaire composé d'un champ de saisie et d'un ´
 simple bouton. 
 2. Creer un fichier exo1.js 
 3. Rajouter l'instruction precedente par :

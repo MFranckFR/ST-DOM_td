@@ -83,8 +83,9 @@ p.enonce:before {
     box-sizing:border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 5px;
-    padding:20px;
+    padding:30px;
     background-color: lightgoldenrodyellow;
+    width:400px;
 }
 
 .key{
@@ -93,4 +94,16 @@ p.enonce:before {
 
 .value{
     font-weight: bold;
+}
+
+#flipBox{
+    float:right;
+    display:flex;
+}
+.flip{
+    display: block;
+    /*transform: scaleX(-1);*/
+}
+.flop{
+    display: none
 }
