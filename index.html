@@ -73,5 +73,17 @@
     <button onclick="resultatGetAttributes('w3r', 'ctnReponseAttribs')">Click here to get attributes value</button>
     <p class="reponse" id="ctnReponseAttribs"></p>
 
+    <h2>TP Exercice TPDom Ex3</h2>
+    <p class="enonce">Ecrivez une fonction JavaScript pour obtenir les valeurs du prénom et du nom de
+        2famille du formulaire suivant.</p>
+
+    <p id="ctnResultEx3" class=reponse></p>
+
+    <form id="form1""  onsubmit="return false">
+        First name: <input type="text" name="fname" value="David"><br>
+        Last name: <input type="text" name="lname" value="Beckham"><br>
+        <input type="submit" value="Submit" onclick="resultatgetFormFieldsByNames('form1', ['fname','lname'])">
+    </form>
+
 </body>
 </html>

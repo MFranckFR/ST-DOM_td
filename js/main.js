@@ -90,9 +90,32 @@ function dict2html(dict, eltType='',){
     return l.join('\n');
 }
 
-// Auto-resize textarea
-// adapté du code
-// https://stackoverflow.com/questions/38738442/is-there-a-way-to-make-a-textbox-auto-expand-without-jquery
+/**
+ * Renvoie ce que contient un formulaire.
+ * @param {DomID} formID ID du formulaire 
+ * @param {*} names Noms des champs désirés
+ * @return {Object Dict} Object {Key:values}
+ */
+function getFormFieldsByNames(formID, names){
+    var eltForm = document.getElementById(formID);
+    var dict = {};
+    for (var name of names){
+        dict[name] = [];
+        document.getElementsByName(name).forEach(e=>dict[name].push(e.value));
+    }
+    return dict;
+}
+
+function resultatgetFormFieldsByNames(formID, names){
+    var dict = getFormFieldsByNames(formID, names);
+    writeInto('ctnResultEx3', `<ul>${dict2html(dict, 'li')}</ul>`);
+}
+
+/**
+ * Auto-resize d'un textarea
+ * adapté du code
+ * https://stackoverflow.com/questions/38738442/is-there-a-way-to-make-a-textbox-auto-expand-without-jquery
+ */
 class TextAreaAutoresize {
 
     observe = null;
@@ -134,6 +157,7 @@ function main(){
 }
 
 main();
+
 
 
 /*
