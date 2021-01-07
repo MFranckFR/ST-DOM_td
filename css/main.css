@@ -3,7 +3,7 @@
 
 
 body{
-    font-family: 'Libre Baskerville', serif;
+    font-family: Georgia, "Times New Roman", serif;
     padding: 10pt;
     margin-left:50px;
     margin-right:30px;
@@ -107,3 +107,19 @@ p.enonce:before {
 .flop{
     display: none
 }
+
+code
+{
+  /* font-style: italic;
+  margin-left: 32px;
+  */
+background : #f8f8f8;
+overflow : auto;
+width : auto;
+/* border : solid gray; */
+border-width : .1e m .1e m .1e m .8e m;
+padding : .2e m .6e m;
+
+
+}
+

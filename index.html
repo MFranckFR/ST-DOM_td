@@ -117,5 +117,57 @@
        
     </div>
 
+    <div id="ctnEx5">
+        <h2>Ex5</h2>
+
+        <p class="enonce">Un premier controle de formulaire</p>
+
+        <ol>
+            <li>Ecrire une page HTML comportant un mini-formulaire composé d'un champ de saisie et d'un ´
+                simple bouton. </li>
+            <li>Creer un fichier exo1.js</li>
+            <li>Rajouter l'instruction precedente par :<br />
+                <blockquote>
+                    <pre>
+                              <code>
+function controler() {
+    var zoneSaisie = document.getElementById("zoneSaisie");
+    alert("La Zone de saisie contient : " + zoneSaisie.value);
+}
+                        </code>
+                    </pre>
+                </blockquote>
+                Decrivez le code de cette fonction. Il faudrait maintenant associer ce code de controle a l'evenement
+                click sur le bouton du formulaire. Ecrivez le code correspondant.
+            </li>
+            <li>Modifier la fonction de controle pour afficher un message d'erreur lorsque le champ est vide, et
+                afficher le contenu du champ lorsqu'il ne l'est pas.</li>
+            <li>La fonction eval, prenant en parametre une chaıne de caracteres representant une expression,
+                permet d'evaluer cette derniere. Par exemple :
+                <blockquote>
+                    <pre>
+                              <code>
+eval("3+4"); // retourne la valeur 7
+eval("bon"+"jour"); //retourne bonjour
+                        </code>
+                    </pre>
+                </blockquote>
+                Ajouter (concatenez) le resultat de l´evaluation de l'expression donnée par l'utilisateur dans le
+                champ de saisie a votre affichage. Cela donne une page HTML contenant un formulaire permettant d'executer
+                "online" de petites operations.
+        
+            </li>
+        </ol>
+    </div>
+
+    <div id="resultEx5">
+        <form id="formCal" method="get" onsubmit="return false;" action="">
+            <label for="nb">saisissez une opération litérale</label>
+                <input type="submit" value="Add" onclick="add('ope', 'calcResult')"/>
+            <label for="nb"></label><input id="ope" name="ops" type="text" value="2+4x5" />
+            <label for="equal">=</label><input id="calcResult" name="equal" type="text" width="5" value="" readonly="readonly"/>
+    </div>
+
+    <footer>FIN DE PAGE</footer>
 </body>
 </html>

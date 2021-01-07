@@ -135,7 +135,16 @@ var flipFlop = {
     }
 }
 
+function calc_result(str_op){
+    console.log(`elt_op:${str_op}`);
+    str_op = str_op.replace(/x/gi, '*'); // remplace x par *
+    console.log(`op:${str_op} `);
+    return eval(str_op);
+}
 
+function add(eltID, resultID){
+    document.getElementById(resultID).value = calc_result(document.getElementById(eltID).value);
+}
 
 
 /**
@@ -185,45 +194,3 @@ function main(){
 
 window.onload = main();
 
-
-
-/*
-Exercice 4 : 
-À un document HTML, ajouter des alertes :
-- Au chargement de la page (attribut onload)
-- Quand on passe sur une image (attribut onmouseover)
-- Quand on clique sur un bouton (attribut onclick)
-Avec des boutons :
-- Changer la couleur de fond quand on clique sur un bouton
-- Changer aussi l'apparence du bouton
-- Ajouter un bouton qui permette de revenir à la normale.
-Sur des images : 
-- Changer une image par une autre quand la souris passe dessus (attribut onmouseover)
-- Remettre l'image d'origine quand la souris quitte l'image (attribut onmouseout)
-
-*/
-
-/*
-Ex5
-
-Un premier controle de formulaire
-1. Ecrire une page HTML comportant un mini-formulaire composé d'un champ de saisie et d'un ´
-simple bouton. 
-2. Creer un fichier exo1.js 
-3. Rajouter l'instruction precedente par :
-function controler() {
-var zoneSaisie = document.getElementById("zoneSaisie");
-alert("La Zone de saisie contient : " + zoneSaisie.value);
-}
-Decrivez le code de cette fonction. Il faudrait maintenant associer ce code de controle a l'evenement
-click sur le bouton du formulaire. Ecrivez le code correspondant.
-4. Modifier la fonction de controle pour afficher un message d'erreur lorsque le champ est vide, et
-afficher le contenu du champ lorsqu'il ne l'est pas.
-5. La fonction eval, prenant en parametre une chaıne de caracteres representant une expression,
-permet d'evaluer cette derniere. Par exemple :
-eval("3+4"); // retourne la valeur 7
-eval("bon"+"jour"); //retourne bonjour
-Ajouter (concatenez) le resultat de l´evaluation de l'expression donn´ee par l'utilisateur dans le
-champ de saisie a votre affichage. Cela donne une page HTML contenant un formulaire permettant d'executer "online" de petites operations.
-
-*/
